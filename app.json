@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "TaxXpertsAppDev",
-    "slug": "TaxXpertsAppDev",
+    "slug": "taxxpertsapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,16 +15,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.taxxperts.myapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.taxxperts.myapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "29b97d40-1fc8-4f36-8896-2a897ac18216"
+      }
+    },
+    "owner": "chidiya21"
   }
 }
