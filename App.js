@@ -1,10 +1,21 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image
+        source={require('./assets/templogo.png')}
+        style={styles.logo}
+        resizeMode="contain" 
+      />
+      <Text style={styles.title}>TaxXperts</Text>
+      <Text style={styles.subtitle}>Building Financial Foundations for Young Adults</Text>
+      <Button
+        title="CONTINUE"
+        onPress={() => alert('Button clicked!')}
+      />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,10 +24,23 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#e6e6fa',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 16,
+  },
+  logo: {
+    width: 550,
+    height: 550,
+    marginBottom: 16,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16,
+  },
+  subtitle: {
+    fontSize: 16,
+    marginBottom: 32,
   },
 });
-
-
