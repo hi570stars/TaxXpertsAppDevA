@@ -14,7 +14,6 @@ export default function App() {
       <Text style={styles.subtitle}>Building Financial Foundations for Young Adults</Text>
       <Button
         title="CONTINUE"
-        onPress={() => alert('Button clicked!')}
       />
       <StatusBar style="auto" />
     </View>
