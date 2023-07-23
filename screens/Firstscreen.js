@@ -1,6 +1,4 @@
-// I NEED TO FIX SOME STUFF IN THIS FILE, WILL COME BACK LATER
-
-import React from 'react'; // added this
+import React, { useEffect } from 'react'; // added this
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -9,11 +7,12 @@ const Firstscreen = () => {
   const navigation = useNavigation();
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.navigate('BewareOfTaxFraud');
+      navigation.navigate('HomeScreen');
     }, 3000);
 
     return () => clearTimeout(timer);
   }, [navigation]); 
+
 
 
   return (
@@ -25,9 +24,6 @@ const Firstscreen = () => {
       />
       <Text style={styles.title}>TaxXperts</Text>
       <Text style={styles.subtitle}>Building Financial Foundations for Young Adults</Text>
-      <Button
-        title="CONTINUE" // I'm not sure we need a button? Maybe just have it continue to the next page on its own. I'll change it later once I figure out how - C
-      />
       <StatusBar style="auto" />
     </View>
   );
