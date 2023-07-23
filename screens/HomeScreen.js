@@ -11,7 +11,7 @@ import Constants from 'expo-constants';
 //import LinksPage from './screens/LinksPage';
 
 
-export default function Intro (navigation) {
+export default function HomeScreen () {
 
     return (
     <View style = {styles.screen}>
