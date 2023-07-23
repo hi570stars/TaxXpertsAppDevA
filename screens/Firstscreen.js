@@ -9,7 +9,7 @@ const Firstscreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigation.navigate('HomeScreen');
-    }, 3000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, [navigation]); 

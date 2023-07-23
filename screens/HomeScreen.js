@@ -4,6 +4,12 @@ import React, {Component, useEffect, useState} from 'react';
 import * as Font from 'expo-font';
 import Constants from 'expo-constants';
 
+//import BewareOfTaxFraud from './components/BewareOfTaxFraud'; 
+//import AboutUs from './screens/AboutUs';
+//import Tax101 from './screens/Tax101';
+//import SurveyPage from './screens/SurveyPage';
+//import LinksPage from './screens/LinksPage';
+
 
 export default function Intro (navigation) {
 
@@ -94,8 +100,4 @@ export default function Intro (navigation) {
         paddingTop: Constants.statusBarHeight
       },
   });
-//import BewareOfTaxFraud from './components/BewareOfTaxFraud'; 
-//import AboutUs from './screens/AboutUs';
-//import Tax101 from './screens/Tax101';
-//import SurveyPage from './screens/SurveyPage';
-//import LinksPage from './screens/LinksPage';
+
