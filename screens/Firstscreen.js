@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const Firstscreen = () => {
+  // to navigate to homsecreen till I figure out the fade - C
   const navigation = useNavigation();
   useEffect(() => {
     const timer = setTimeout(() => {
