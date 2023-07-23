@@ -5,7 +5,7 @@ import * as Font from 'expo-font';
 import Constants from 'expo-constants';
 
 
-export default function Intro (navigation) {
+export default function HomeScreen () {
 
     return (
     <View style = {styles.screen}>
