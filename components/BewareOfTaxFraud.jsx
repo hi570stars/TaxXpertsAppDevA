@@ -11,7 +11,9 @@ const BewareOfTaxFraud = () => {
         Tax fraud is a serious issue that can have significant consequences. It's important to be aware of the signs of tax fraud and how to protect yourself. Here are some resources to help you stay informed:
       </Text>
 
-      <Image source={require('./assets/taxfraud.jpg')} style={styles.image} />
+      <Image source={require('../assets/tf.png')} 
+      style={styles.image} 
+      />
 
       <Text style={styles.subheading}>Videos:</Text>
           <WebView source={{ uri: 'https://www.youtube.com/watch?v=ID_xGbn109I' }} style={styles.video} />
