@@ -100,4 +100,3 @@ export default function HomeScreen () {
         paddingTop: Constants.statusBarHeight
       },
   });
-
