@@ -2,13 +2,14 @@ import React from 'react';
 import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import Constants from 'expo-constants';
 
-const image = require('../assets/library.jpg');
+const image = require('C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/assets/images/library.jpg');
 
-const LinksPage = () => {
+const TaxForms = ({navigation}) => {
   return (
 
-
     <View style={styles.container}>
+        
+      
       <ImageBackground source={image} style={styles.image}>
         <View style={styles.header}>
           <Text style={styles.headerText}>Find links below to various tax forms.</Text>
@@ -21,6 +22,12 @@ const LinksPage = () => {
 };
 
 const styles = StyleSheet.create({
+nav:{
+    flex: .2,
+    justifyContent:'center',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+},
   container: {
     flex: 1,
     flexDirection: 'column',
@@ -53,4 +60,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LinksPage;
+export default TaxForms;
