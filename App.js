@@ -1,66 +1,51 @@
 // Danica - D, Sneha - S, Shriya - C
 // Let's try to comment on the stuff we add so we can keep track of who changes what
 
-import React, { useEffect } from 'react'; // added this'
-import { View } from 'react-native'; // added this
+import React, {useEffect, useState} from 'react';
+import {NavigationContainer} from "@react-navigation/native";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
+import Header from './src/components/Header';
+import Footer from './src/components/Footer';
 
 
-import Firstscreen from './screens/Firstscreen';
-import HomeScreen from './screens/HomeScreen';
-import BewareOfTaxFraud from './components/BewareOfTaxFraud'; // and this
+import Intro from "./src/screens/Intro";
+import AboutUs from "./src/screens/AboutUs";
+import Survey from "./src/screens/Survey";
+import TaxForms from "./src/screens/TaxForms";
+import TaxFraud from "./src/screens/TaxFraud";
 
-const stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
-//trying to make it fade rn, kind of failing - C
-const forFade = ({ current }) => ({
-  cardStyle: {
-    opacity: current.progress,
-  },
-  transitionSpec: {
-    duration: 3000, 
-  }
-});
+export default function App(){
+  return(
+      <NavigationContainer>
+        <Stack.Navigator>
+        
+          <Stack.Screen 
+          name = "Introduction" 
+          component = {Intro}
+          options={{title: 'TaxXperts App Introduction'}}/>
+          
+          <Stack.Screen 
+          name = "Survey" 
+          component = {Survey}
+          options={{title: 'TaxXperts App Survey'}}/>
+        <Stack.Screen 
+          name = "TaxForms" 
+          component = {TaxForms}
+          options={{title: 'Tax Forms Linked'}}/>
+        <Stack.Screen 
+          name = "TaxFraud" 
+          component = {TaxFraud}
+          options={{title: 'Beware of Tax Fraud'}}/>
+        <Stack.Screen 
+          name = "AboutUs" 
+          component = {AboutUs}
+          options={{title: 'About the Creators'}}/>
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <stack.Navigator initialRouteName='Firstscreen'>
-        <stack.Screen name='Firstscreen' 
-                      component={Firstscreen} 
-                      options={{ cardStyleInterpolator: forFade,
-                                headerShown:false }}
-                      />
-        <stack.Screen name='HomeScreen' // so i added this when trying to figure out the links page, but realized it didn't matter till nav worked - C
-                      component={HomeScreen} 
-                      options={{
-                        headerTitle: 'Home Screen', 
-                        headerStyle: {
-                          backgroundColor: '#7b68ee', 
-                        },
-                        headerTitleStyle: {
-                          fontSize: 24,
-                          fontWeight: 'bold',
-                          color: 'white', 
-                        },
-                        headerTitleAlign: 'center', 
-                        headerLeft: null, 
-                      }}
-        />
-      </stack.Navigator>
-    </NavigationContainer>
-  );
+        </Stack.Navigator>
+      </NavigationContainer>
+  )
+
 }
-// - Survey page stuff 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//   },
-// });
-
-// <View style={styles.container}>
-//   <TaxSurveyPage />
-// </View>
