@@ -1,20 +1,44 @@
 import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet, Text, View} from 'react-native';
+import { Platform, StyleSheet, Text, View, TouchableOpacity, Button} from 'react-native';
 import React, {Component, useEffect, useState} from 'react';
 import * as Font from 'expo-font';
 import Constants from 'expo-constants';
-
-//import BewareOfTaxFraud from './components/BewareOfTaxFraud'; 
-//import AboutUs from './screens/AboutUs';
-//import Tax101 from './screens/Tax101';
-//import SurveyPage from './screens/SurveyPage';
-//import LinksPage from './screens/LinksPage';
-
-
-export default function HomeScreen () {
+import Icon from 'react-native-vector-icons/AntDesign';
+import Header from 'C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/src/components/Header';
+import Footer from 'C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/src/components/Header';
+const Intro = ({navigation}) => {
 
     return (
     <View style = {styles.screen}>
+       <View style = {styles.nav} navigation = {navigation}>
+       <Button
+              title = "Home"
+              color = "black"
+              onPress={() => navigation.navigate('Intro')}
+            />
+            <Button
+              title = "Survey"
+              color = "black"
+              onPress={() => navigation.navigate('Survey')}
+            />
+            <Button
+              title = "Tax Forms"
+              color = "black"
+              onPress={() => navigation.navigate('TaxForms')}
+            />
+            <Button
+              title = "Tax Fraud"
+              color = "black"
+              onPress={() => navigation.navigate('TaxFraud')}
+            />
+            <Button
+              title = "About Us"
+              color = "black"
+              onPress={() => navigation.navigate('AboutUs')}
+            />
+
+      </View>
+      
       <View style = {styles.header}>
             <Text style = {styles.text}>TaxXperts</Text>
         </View>
@@ -34,9 +58,11 @@ export default function HomeScreen () {
           Does this all sound complicated already? Well, allow us, the TaxXperts, to guide you through this journey of Taxes. Here, you will find a survey gauging the estimated types of taxes you will need to pay, links to tax forms so you don't have to rummage the internet for them, a few warnings about not paying your taxes and the consequences it causes, as well as an About Us section, so you know more about the creators of this app, and our mission to make tax knowledge more accessible to all! 
         </Text>
       </View>
-      <View style = {styles.footer} navigation={navigation}>
+      <View style = {styles.footer}>
+            
             <Text style = {styles.tinyText}>copyrighted TaxXperts 2023</Text>
         </View>
+
       
     </View>
     );
@@ -59,7 +85,12 @@ export default function HomeScreen () {
       backgroundColor: 'pink'
       
     },
-    
+    nav:{
+      flex: .2,
+      justifyContent:'center',
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+    },
     introTitle:{
       flex:.5,
       width:'100%',
@@ -74,7 +105,7 @@ export default function HomeScreen () {
       justifyContent:'center',
       flexDirection: 'row',
       alignItems: 'flex-end',
-      backgroundColor: 'blue'
+      backgroundColor: 'blue',
     },
     text:{
       textAlign: 'center',
@@ -96,7 +127,8 @@ export default function HomeScreen () {
         width: '100%',
         justifyContent:'center',
         flexDirection: 'row',
-        alignItems: 'flex-start',
         paddingTop: Constants.statusBarHeight
       },
   });
+  
+  export default Intro;
