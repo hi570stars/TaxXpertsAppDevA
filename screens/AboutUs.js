@@ -6,7 +6,7 @@ const AboutUs = () => {
     <View style={styles.container}>
       <Text style={styles.heading}>About Us</Text>
       <Text style={styles.content}>
-        This is the About Us page. You can add your content here.
+        CONTENT CONTENT CONTENT.
       </Text>
     </View>
   );
