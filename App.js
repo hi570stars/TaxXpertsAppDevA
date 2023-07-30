@@ -53,3 +53,14 @@ export default function App() {
     </NavigationContainer>
   );
 }
+// - Survey page stuff 
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//   },
+// });
+
+// <View style={styles.container}>
+//   <TaxSurveyPage />
+// </View>
