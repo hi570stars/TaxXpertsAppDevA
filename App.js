@@ -33,7 +33,22 @@ export default function App() {
                       options={{ cardStyleInterpolator: forFade,
                                 headerShown:false }}
                       />
-        <stack.Screen name='HomeScreen' component={HomeScreen} />
+        <stack.Screen name='HomeScreen' // so i added this when trying to figure out the links page, but realized it didn't matter till nav worked - C
+                      component={HomeScreen} 
+                      options={{
+                        headerTitle: 'Home Screen', 
+                        headerStyle: {
+                          backgroundColor: '#7b68ee', 
+                        },
+                        headerTitleStyle: {
+                          fontSize: 24,
+                          fontWeight: 'bold',
+                          color: 'white', 
+                        },
+                        headerTitleAlign: 'center', 
+                        headerLeft: null, 
+                      }}
+        />
       </stack.Navigator>
     </NavigationContainer>
   );
