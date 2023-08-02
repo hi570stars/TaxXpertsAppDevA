@@ -11,11 +11,7 @@ const AboutUs = ({navigation}) => {
     return (
     <View style = {styles.screen}>
        <View style = {styles.nav} navigation = {navigation}>
-       <Button
-              title = "Home"
-              color = "black"
-              onPress={() => navigation.navigate('Intro')}
-            />
+
             <Button
               title = "Survey"
               color = "black"
