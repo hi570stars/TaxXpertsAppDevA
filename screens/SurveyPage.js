@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
-const TaxSurveyPage = () => {
+const SurveyPage = () => {
   const [age, setAge] = useState('');
   const [incomeRange, setIncomeRange] = useState('');
   const [employmentStatus, setEmploymentStatus] = useState('');

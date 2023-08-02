@@ -4,9 +4,9 @@ import React, {Component, useEffect, useState} from 'react';
 import * as Font from 'expo-font';
 import Constants from 'expo-constants';
 import Icon from 'react-native-vector-icons/AntDesign';
-import Header from 'C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/src/components/Header';
-import Footer from 'C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/src/components/Header';
-const Intro = ({navigation}) => {
+// import Header from 'C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/src/components/Header';
+// import Footer from 'C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/src/components/Header';
+const HomeScreen = ({navigation}) => {
 
     return (
     <View style = {styles.screen}>
@@ -131,4 +131,4 @@ const Intro = ({navigation}) => {
       },
   });
   
-  export default Intro;
+  export default HomeScreen;

@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import Constants from 'expo-constants';
 
-const image = require('C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/assets/images/library.jpg');
+const image = require('../assets/library.jpg');
 
-const TaxForms = ({navigation}) => {
+const LinksPage = ({navigation}) => {
   return (
 
     <View style={styles.container}>
@@ -60,4 +60,4 @@ nav:{
   },
 });
 
-export default TaxForms;
+export default LinksPage;

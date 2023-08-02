@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet, Text, View, Image,Button} from 'react-native';
 import React, {Component, useEffect, useState} from 'react';
-import * as Font from 'expo-font';
+// import * as Font from 'expo-font';
 import Constants from 'expo-constants';
-import Header from 'C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/src/components/Header';
+// import Header from 'C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/src/components/Header';
 
 
 const AboutUs = ({navigation}) => {
@@ -41,12 +41,12 @@ const AboutUs = ({navigation}) => {
 
       <View style = {styles.header}>
             <Text style = {styles.text}>About Us!</Text>
-        </View>
+        </View> 
       
       <View style = {styles.picBox}>
-        <Image style = {styles.pic} source={require('C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/assets/images/icon.png')}/>
-        <Image style = {styles.pic} source={require('C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/assets/images/icon.png')}/>
-        <Image style = {styles.pic} source={require('C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/assets/images/icon.png')}/>
+        <Image style = {styles.pic} source={require('../assets/icon.png')}/>
+        <Image style = {styles.pic} source={require('../assets/icon.png')}/>
+        <Image style = {styles.pic} source={require('../assets/icon.png')}/>
 
       </View>
       

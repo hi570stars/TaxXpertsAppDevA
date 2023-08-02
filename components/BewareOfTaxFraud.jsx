@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import * as Font from 'expo-font';
 import Constants from 'expo-constants';
 
-const TaxFraud = (navigation) => {
+const BewareOfTaxFraud = (navigation) => {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Beware of Tax Fraud</Text>
@@ -14,7 +14,7 @@ const TaxFraud = (navigation) => {
         Tax fraud is a serious issue that can have significant consequences. It's important to be aware of the signs of tax fraud and how to protect yourself. Here are some resources to help you stay informed:
       </Text>
 
-      <Image source={require('C:/Users/18064/Downloads/TaxXpertsApp/TaxXpertsAppDev/assets/images/tf.png')} 
+      <Image source={require('../assets/tf.png')} 
       style={styles.image} 
       />
 
@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TaxFraud;
+export default BewareOfTaxFraud;
