@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, CheckBox, StyleSheet } from 'react-native';
 
 const SurveyPage = () => {
+  const [name, setName] = useState('');
   const [age, setAge] = useState('');
-  const [incomeRange, setIncomeRange] = useState('');
-  const [employmentStatus, setEmploymentStatus] = useState('');
+  const [isUnder18, setIsUnder18] = useState(false);
+  const [occupation, setOccupation] = useState('');
+  const [studentLoans, setStudentLoans] = useState(false);
+  const [income, setIncome] = useState('');
   const [showResults, setShowResults] = useState(false);
 
   const handleSurveySubmit = () => {
@@ -16,6 +19,14 @@ const SurveyPage = () => {
     <View style={styles.container}>
       <Text style={styles.header}>Tax Survey</Text>
 
+      <Text>Name:</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Please enter your name"
+        onChangeText={text => setName(text)}
+        value={name}
+      />
+
       <Text>Age:</Text>
       <TextInput
         style={styles.input}
@@ -25,7 +36,69 @@ const SurveyPage = () => {
         keyboardType="numeric"
       />
 
-      {/* We could maybe add similar components for things like income range and employment status selection */}
+      <View style={styles.checkboxContainer}>
+        <CheckBox
+          value={isUnder18}
+          onValueChange={value => setIsUnder18(value)}
+        />
+        <Text>Are you under 18?</Text>
+      </View>
+
+      {isUnder18 ? (
+        <View>
+          {/* Display general info for those under 18 */}
+        </View>
+      ) : (
+        <View>
+          <Text>Occupation:</Text>
+          <View style={styles.checkboxContainer}>
+            <CheckBox
+              value={occupation === 'student'}
+              onValueChange={() => setOccupation('student')}
+            />
+            <Text>Student</Text>
+          </View>
+          <View style={styles.checkboxContainer}>
+            <CheckBox
+              value={occupation === 'other'}
+              onValueChange={() => setOccupation('other')}
+            />
+            <Text>Other</Text>
+          </View>
+
+          {occupation === 'student' && (
+            <View>
+              {/* Ask about student loans */}
+            </View>
+          )}
+
+          {occupation === 'other' && (
+            <View>
+              {/* Display general info for other occupation */}
+            </View>
+          )}
+
+          {occupation === 'employed' && (
+            <View>
+              <Text>Income:</Text>
+              <View style={styles.checkboxContainer}>
+                <CheckBox
+                  value={income === 'likelyTaxFiles'}
+                  onValueChange={() => setIncome('likelyTaxFiles')}
+                />
+                <Text>Likely to file taxes</Text>
+              </View>
+              <View style={styles.checkboxContainer}>
+                <CheckBox
+                  value={income === 'notLikelyTaxFiles'}
+                  onValueChange={() => setIncome('notLikelyTaxFiles')}
+                />
+                <Text>Not likely to file taxes</Text>
+              </View>
+            </View>
+          )}
+        </View>
+      )}
 
       <TouchableOpacity style={styles.button} onPress={handleSurveySubmit}>
         <Text style={styles.buttonText}>Submit Survey</Text>
@@ -40,7 +113,6 @@ const SurveyPage = () => {
   );
 };
 
-// styling!! - can't tell what it looks like still but you guys can play around with it :)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -73,6 +145,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  checkboxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
   },
 });
 
