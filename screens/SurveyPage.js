@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, CheckBox, StyleSheet } from 'react-native';
+import { View, Button, Text, TextInput, TouchableOpacity, CheckBox, StyleSheet } from 'react-native';
 
-const SurveyPage = () => {
+const SurveyPage = ({navigation}) => {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [isUnder18, setIsUnder18] = useState(false);
@@ -17,6 +17,30 @@ const SurveyPage = () => {
 
   return (
     <View style={styles.container}>
+      
+      <View style = {styles.nav} navigation = {navigation}>
+            <Button
+              title = "Survey"
+              color = "black"
+              onPress={() => navigation.navigate('Survey')}
+            />
+            <Button
+              title = "Tax Forms"
+              color = "black"
+              onPress={() => navigation.navigate('TaxForms')}
+            />
+            <Button
+              title = "Tax Fraud"
+              color = "black"
+              onPress={() => navigation.navigate('TaxFraud')}
+            />
+            <Button
+              title = "About Us"
+              color = "black"
+              onPress={() => navigation.navigate('AboutUs')}
+            />
+
+      </View>
       <Text style={styles.header}>Tax Survey</Text>
 
       <Text>Name:</Text>
@@ -150,6 +174,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
+  },
+  nav:{
+    flex: .2,
+    justifyContent:'center',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    marginTop: 10
   },
 });
 
