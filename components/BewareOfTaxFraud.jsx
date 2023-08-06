@@ -42,6 +42,7 @@ const BewareOfTaxFraud = ({navigation}) => {
 
       <Image source={require('../assets/tf.png')} 
       style={styles.image} 
+      resizeMode="contain"
       />
 
       <Text style={styles.subheading}>Videos:</Text>
@@ -61,28 +62,30 @@ const BewareOfTaxFraud = ({navigation}) => {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'linen',
+    alignItems: 'center',
     padding: 16,
   },
   heading: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#B8E2C8'
+    color: 'darkgreen'
   },
   description: {
     fontSize: 16,
     marginBottom: 20,
   },
   image: {
-    width: '100%',
-    height: 200,
+    width: '50%',
+    height: 300,
     marginBottom: 20,
   },
   subheading: {
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#B0A1BA',
+    color: 'darkred',
   },
   video: {
     width: '100%',
@@ -91,7 +94,7 @@ const styles = StyleSheet.create({
   },
   link: {
     fontSize: 16,
-    color: '#A5B5BF',
+    color: '#2f4f4f',
     marginBottom: 10,
   },
   nav:{
