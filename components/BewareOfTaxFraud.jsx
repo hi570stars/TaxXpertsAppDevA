@@ -1,12 +1,38 @@
 import React, {Component, useEffect, useState} from 'react';
-import { Platform,View, Text, Image, Linking, StyleSheet } from 'react-native';
+import { Platform,View, Text, Image, Linking, StyleSheet, Button } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { StatusBar } from 'expo-status-bar';
 import * as Font from 'expo-font';
 import Constants from 'expo-constants';
 
-const BewareOfTaxFraud = (navigation) => {
+const BewareOfTaxFraud = ({navigation}) => {
   return (
+    
+    <View style={styles.container}>
+      <View style = {styles.nav} navigation = {navigation}>
+            <Button            
+              title = "Survey"
+              color = "black"
+              onPress={() => navigation.navigate('Survey')}
+            />
+            <Button
+              title = "Tax Forms"
+              color = "black"
+              onPress={() => navigation.navigate('TaxForms')}
+            />
+            <Button
+              title = "Tax Fraud"
+              color = "black"
+              onPress={() => navigation.navigate('TaxFraud')}
+            />
+            <Button
+              title = "About Us"
+              color = "black"
+              onPress={() => navigation.navigate('AboutUs')}
+            />
+
+      </View>
+
     <View style={styles.container}>
       <Text style={styles.heading}>Beware of Tax Fraud</Text>
 
@@ -19,8 +45,8 @@ const BewareOfTaxFraud = (navigation) => {
       />
 
       <Text style={styles.subheading}>Videos:</Text>
-          <WebView source={{ uri: 'https://www.youtube.com/watch?v=ID_xGbn109I' }} style={styles.video} />
-          <WebView source={{ uri: 'https://www.youtube.com/watch?v=NglAffwNFho' }} style={styles.video} />
+      <Text style={styles.link} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=ID_xGbn109I')}>How to Protect yourself from Tax Fraud</Text>
+      <Text style={styles.link} onPress={() => Linking.openURL('https://www.youtube.com/watch?v=NglAffwNFho')}>How to Avoid Tax Scams</Text>
 
       <Text style={styles.subheading}>Helpful Links:</Text>
       <Text style={styles.link} onPress={() => Linking.openURL('https://www.irs.gov/individuals/how-do-you-report-suspected-tax-fraud-activity')}>IRS Identity Theft, Fraud & Scams</Text>
@@ -28,6 +54,7 @@ const BewareOfTaxFraud = (navigation) => {
           <Text style={styles.link} onPress={() => Linking.openURL('https://www.irs.gov/about-irs/irs-priorities-detecting-fraud-protecting-taxpayers')}>FTC Tax Identity Theft Awareness</Text>
           <Text style={styles.link} onPress={() => Linking.openURL('https://www.industriuscfo.com/seasons-new-online-tax-fraud-method/')}>FTC Tax Identity Theft Awareness</Text>
 
+    </View>
     </View>
   );
 };
@@ -66,6 +93,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#A5B5BF',
     marginBottom: 10,
+  },
+  nav:{
+    flex: .2,
+    justifyContent:'center',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    marginTop: '1%'
   },
 });
 
