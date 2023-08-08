@@ -22,10 +22,11 @@ the TaxXperts!
 - Beware of Tax Fraud
 
 > Challenges Faced:
-1) Getting all of the pages to have similar styling/look uniform across the various screens. 
-2) Danica wasn't able to get Expo running on her computer, so she couldn't see what the project looked like. Luckily her two other teammates were very supportive and shared what it looked like so she could see how things were going! (She did reach out to C2C - but no solutions were found)
-3) Learning to work with a new framework/code + finding time to work when we all have different schedules and like to stay busy ;)
-4) ** Insert more here **
+1) Getting all of the pages to have similar styling/look uniform across the various screens.
+2) Having the various links, videos, and images displayed correctly.
+3) Danica wasn't able to get Expo running on her computer, so she couldn't see what the project looked like. Luckily her two other teammates were very supportive and shared what it looked like so she could see how things were going! (She did reach out to C2C - but no solutions were found)
+4) Learning to work with a new framework/code + finding time to work when we all have different schedules and like to stay busy ;)
+5) ** Insert more here **
 
 > Decisions Made:
 1) What civic issue to choose (also a challenge faced in a way as there were SO many options)?
