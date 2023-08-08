@@ -13,7 +13,7 @@ Always here for you,
 
 the TaxXperts!
 
-> On our app, you will find various pages and resources including the following pages: 
+> Usage: On our app, you will find various pages and resources including the following pages: 
 - About Us
 - Home Page
 - Links/Resources
@@ -36,6 +36,14 @@ the TaxXperts!
 1) We believe that with more time, we could get this app looking and running absolutely AMAZING! We would love to see it on the app store so that way our project and leave a positive impact on the lives of those around us.
 2) ** Insert more here **
 
+> Project Setup:
+** Insert more here **
+
+> Installation:
+** Insert more here **
+
+> API's: 
+** Insert more here **
 
 > Why do I have a folder named ".expo" in my project?
 
