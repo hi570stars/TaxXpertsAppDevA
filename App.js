@@ -42,14 +42,14 @@ export default function App(){
         <Stack.Screen name='HomeScreen' // so i added this when trying to figure out the links page, but realized it didn't matter till nav worked - C
                       component={HomeScreen} 
                       options={{
-                        headerTitle: 'Home Screen', 
+                        headerTitle: 'TaxXperts', 
                         headerStyle: {
-                          backgroundColor: '#7b68ee', 
+                          // backgroundColor: 'aquamarine', 
                         },
                         headerTitleStyle: {
                           fontSize: 24,
                           fontWeight: 'bold',
-                          color: 'white', 
+                          color: 'black', 
                         },
                         headerTitleAlign: 'center', 
                         headerLeft: null, 
@@ -65,9 +65,9 @@ export default function App(){
           component = {SurveyPage}
           options={{title: 'TaxXperts App Survey'}}/>
         <Stack.Screen 
-          name = "TaxForms" 
+          name = "Information" 
           component = {LinksPage}
-          options={{title: 'Tax Forms Linked'}}/>
+          options={{title: 'Information on Taxes'}}/>
         <Stack.Screen 
           name = "TaxFraud" 
           component = {BewareOfTaxFraud}

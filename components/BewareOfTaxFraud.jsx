@@ -16,9 +16,9 @@ const BewareOfTaxFraud = ({navigation}) => {
               onPress={() => navigation.navigate('Survey')}
             />
             <Button
-              title = "Tax Forms"
+              title = "Information"
               color = "black"
-              onPress={() => navigation.navigate('TaxForms')}
+              onPress={() => navigation.navigate('Information')}
             />
             <Button
               title = "Tax Fraud"

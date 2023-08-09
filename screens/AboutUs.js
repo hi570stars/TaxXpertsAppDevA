@@ -18,9 +18,9 @@ const AboutUs = ({navigation}) => {
               onPress={() => navigation.navigate('Survey')}
             />
             <Button
-              title = "Tax Forms"
+              title = "Information"
               color = "black"
-              onPress={() => navigation.navigate('TaxForms')}
+              onPress={() => navigation.navigate('Information')}
             />
             <Button
               title = "Tax Fraud"
@@ -40,8 +40,12 @@ const AboutUs = ({navigation}) => {
         </View> 
       
       <View style = {styles.picBox}>
-        <Image style = {styles.pic} source={require('../assets/icon.png')}/>
-        <Image style = {styles.pic} source={require('../assets/icon.png')}/>
+        <Image style = {styles.pic} source={require('../assets/icon.png')} 
+        // resizeMode="contain"
+        />
+        <Image style = {styles.pic} source={require('../assets/danica.jpg')}
+        // resizeMode="contain"
+        />
         <Image style = {styles.pic} source={require('../assets/icon.png')}/>
 
       </View>
@@ -58,7 +62,7 @@ const AboutUs = ({navigation}) => {
       </View>
       <View style = {styles.footer}>
             
-            <Text style = {styles.tinyText}>copyrighted TaxXperts 2023</Text>
+            <Text style = {styles.tinyText}>© TaxXperts 2023</Text>
         </View>
     </View>
     
@@ -85,14 +89,14 @@ const AboutUs = ({navigation}) => {
       justifyContent:'center',
       flexDirection: 'row',
       alignItems: 'flex-start',
-      backgroundColor: 'pink'
+      backgroundColor: '#80e2ff'
       
     },
     
     picBox:{
       flex:3,
       width:'100%',
-      backgroundColor: 'red',
+      backgroundColor: 'aquamarine',
       justifyContent: 'center',
       alignItems: 'center',
       flexDirection: 'row'
@@ -103,7 +107,7 @@ const AboutUs = ({navigation}) => {
       justifyContent:'center',
       flexDirection: 'row',
       alignItems: 'flex-end',
-      backgroundColor: 'blue'
+      backgroundColor: '#ba9fe7'
     },
     text:{
       textAlign: 'center',

@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet, Text, View, TouchableOpacity, Button} from 'react-native';
+import { Platform, StyleSheet, Text, View, TouchableOpacity,  ImageBackground, Button} from 'react-native';
 import React, {Component, useEffect, useState} from 'react';
 import * as Font from 'expo-font';
 import Constants from 'expo-constants';
@@ -9,6 +9,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 const HomeScreen = ({navigation}) => {
 
     return (
+    <View style={styles.backgroundContainer}>
     <View style = {styles.screen}>
        <View style = {styles.nav} navigation = {navigation}>
 
@@ -18,9 +19,9 @@ const HomeScreen = ({navigation}) => {
               onPress={() => navigation.navigate('Survey')}
             />
             <Button
-              title = "Tax Forms"
+              title = "Information"
               color = "black"
-              onPress={() => navigation.navigate('TaxForms')}
+              onPress={() => navigation.navigate('Information')}
             />
             <Button
               title = "Tax Fraud"
@@ -35,9 +36,8 @@ const HomeScreen = ({navigation}) => {
 
       </View>
       
-      <View style = {styles.header}>
-            <Text style = {styles.text}>TaxXperts</Text>
-        </View>
+
+
       
       <View style = {styles.introTitle}>
         <Text style = {styles.text}>
@@ -55,11 +55,10 @@ const HomeScreen = ({navigation}) => {
         </Text>
       </View>
       <View style = {styles.footer}>
-            
-            <Text style = {styles.tinyText}>copyrighted TaxXperts 2023</Text>
+            <Text style = {styles.tinyText}>© TaxXperts 2023</Text>
         </View>
 
-      
+   </View> 
     </View>
     );
    }
@@ -72,13 +71,16 @@ const HomeScreen = ({navigation}) => {
       alignItems: 'center',
       justifyContent:'center',
     },
+    backgroundContainer: {
+      flex: 1,
+    },
     body: {
       flex: 2,
       width: '100%',
       justifyContent:'center',
       flexDirection: 'row',
       alignItems: 'flex-start',
-      backgroundColor: 'pink'
+      backgroundColor: '#c4def6'
       
     },
     nav:{
@@ -93,23 +95,23 @@ const HomeScreen = ({navigation}) => {
       justifyContent:'center',
       flexDirection: 'row',
       alignItems: 'flex-end',
-      backgroundColor: 'red'
+      backgroundColor: '#c4def6',
     },
     footer:{
       flex:1,
       width: '100%',
+      height: '10%',
       justifyContent:'center',
       flexDirection: 'row',
       alignItems: 'flex-end',
-      backgroundColor: 'blue',
+      backgroundColor: '#dcd0f7',
     },
     text:{
       textAlign: 'center',
       flex: 1,
       fontSize: 30,
       fontWeight: 'bold',
-      margin:'.5%'
-
+      margin:'.5%', 
     },
     tinyText:{
       textAlign: 'center',
