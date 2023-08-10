@@ -16,13 +16,15 @@
     "@react-navigation/stack": "^6.3.17",
     "expo": "~48.0.18",
     "expo-status-bar": "~1.4.4",
+    "formik": "^2.4.3",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-native": "0.71.8",
     "react-native-gesture-handler": "~2.9.0",
     "react-native-web": "~0.18.11",
     "react-native-webview": "^13.2.3",
-    "survey-react-ui": "^1.9.102"
+    "survey-react-ui": "^1.9.102",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
