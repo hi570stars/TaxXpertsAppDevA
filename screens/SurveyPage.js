@@ -1,3 +1,6 @@
+// NEED THIS FIRST npm install survey-react-ui --save
+
+
 import React, { useState } from 'react';
 import { View, Button, Text, TextInput, TouchableOpacity, CheckBox, StyleSheet } from 'react-native';
 import 'survey-core/defaultV2.min.css';
