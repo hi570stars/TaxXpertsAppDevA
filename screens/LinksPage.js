@@ -1,15 +1,46 @@
-import React, {useState} from 'react';
-import { View, Text, StyleSheet, ImageBackground, Button} from 'react-native';
-import Constants from 'expo-constants';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, Button } from 'react-native';
 
 const image = require('../assets/library.jpg');
 
 const LinksPage = ({ navigation }) => {
+  const [selectedButton, setSelectedButton] = useState(null);
+
+  const handleButtonPress = (name) => {
+    setSelectedButton(name === selectedButton ? null : name);
+  };
+
+  const renderInfoButtons = () => {
+    const buttonsData = [
+      { name: '1', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
+      { name: '2', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
+      { name: '3', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
+    ];
+
+    return buttonsData.map((button) => (
+      <TouchableOpacity
+        key={button.name}
+        style={[
+          styles.button,
+          selectedButton === button.name && styles.selectedButton,
+        ]}
+        onPress={() => handleButtonPress(button.name)}
+      >
+        {selectedButton !== button.name && (
+          <Text style={styles.buttonText}>{button.name}</Text>
+        )}
+        {selectedButton === button.name && (
+          <Text style={styles.buttonDescription}>{button.text}</Text>
+        )}
+      </TouchableOpacity>
+    ));
+  };
+
   return (
     <View style={styles.container}>
       <ImageBackground source={image} style={styles.image}>
         <View style={styles.nav}>
-          <Button
+        <Button
             title="Survey"
             color="black"
             onPress={() => navigation.navigate('Survey')}
@@ -31,48 +62,17 @@ const LinksPage = ({ navigation }) => {
           />
         </View>
         <View style={styles.header}>
-          <Text style={styles.headerText}>Find basic information on taxes below. </Text>
+          <Text style={styles.headerText}>Find Basic Information on Taxes Below</Text>
         </View>
-        <Text style={styles.text}>  </Text>
-        <>
-          <Info name="1" />
-          <Info name="2" />
-          <Info name="3" />
-          <Info name="4" />
-          <Info name="5" />
-          <Info name="6" />
-          <Info name="7" />
-          <Info name="8" />
-          <Info name="9" />
-        </>
+        <View style={styles.infoContainer}>
+          {renderInfoButtons()}
+        </View>
       </ImageBackground>
     </View>
   );
 };
 
-const Info = props => {
-  const [toScreen, setToScreen] = useState(true);
-  return (
-  <View>
-    <View style={{ height: 20 }} />
-    <Button style={styles.button}
-        onPress={()=> {
-          setToScreen(false);
-        }}
-        disabled = {!toScreen}
-        title = {toScreen ? props.name: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees dont care what humans think is impossible. Yellow, black. Yellow, black. Yellow, black. Yellow, black. Ooh, black and yellow! Lets shake it up a little. Barry! Breakfast is ready! Ooming! Hang on a second. Hello? - Barry? - Adam? - Oan you believe this is happening? - I cant. Ill pick you up. Looking sharp. Use the stairs. Your father paid good money for those. Sorry. Im excited. Heres the graduate. Were very proud of you, son.'}
-    />
-  </View>
- );
-};
-
 const styles = StyleSheet.create({
-  nav: {
-    flex: 0.2,
-    justifyContent: 'center',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-  },
   container: {
     flex: 1,
     flexDirection: 'column',
@@ -83,6 +83,12 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     justifyContent: 'center',
   },
+  nav: {
+    flex: 0.2,
+    justifyContent: 'center',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+  },
   header: {
     paddingTop: 10,
   },
@@ -92,22 +98,33 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
   },
-  textContainer: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
+  infoContainer: {
     paddingTop: 20,
-  },
-  text: {
-    color: 'white',
-    fontSize: 16,
-    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   button: {
-    alignContent: 'center',
-    padding: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
     marginBottom: 10,
-  }
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    borderRadius: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  selectedButton: {
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+  },
+  buttonDescription: {
+    color: 'white',
+    fontSize: 14,
+    marginTop: 8,
+  },
 });
 
 export default LinksPage;

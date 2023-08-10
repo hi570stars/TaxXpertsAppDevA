@@ -21,7 +21,8 @@
     "react-native": "0.71.8",
     "react-native-gesture-handler": "~2.9.0",
     "react-native-web": "~0.18.11",
-    "react-native-webview": "^13.2.3"
+    "react-native-webview": "^13.2.3",
+    "survey-react-ui": "^1.9.102"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

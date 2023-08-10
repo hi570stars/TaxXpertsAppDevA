@@ -21,9 +21,9 @@ const BewareOfTaxFraud = ({navigation}) => {
               onPress={() => navigation.navigate('Information')}
             />
             <Button
-              title = "Tax Fraud"
+              title = "Information"
               color = "black"
-              onPress={() => navigation.navigate('TaxFraud')}
+              onPress={() => navigation.navigate('Information')}
             />
             <Button
               title = "About Us"
@@ -41,7 +41,7 @@ const BewareOfTaxFraud = ({navigation}) => {
       </Text>
 
       <Image source={require('../assets/tf.png')} 
-      style={styles.image} 
+      style={[styles.image, { borderRadius: 150 }]}
       resizeMode="contain"
       />
 
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
   image: {
     width: '50%',
     height: 300,
+    borderRadius: 10,
     marginBottom: 20,
   },
   subheading: {

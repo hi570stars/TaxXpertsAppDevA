@@ -40,13 +40,13 @@ const AboutUs = ({navigation}) => {
         </View> 
       
       <View style = {styles.picBox}>
-        <Image style = {styles.pic} source={require('../assets/icon.png')} 
+        <Image style = {styles.pic} source={require('../assets/shriya.jpg')} 
         // resizeMode="contain"
         />
         <Image style = {styles.pic} source={require('../assets/danica.jpg')}
         // resizeMode="contain"
         />
-        <Image style = {styles.pic} source={require('../assets/icon.png')}/>
+        <Image style = {styles.pic} source={require('../assets/sneha.jpg')}/>
 
       </View>
       
@@ -70,74 +70,100 @@ const AboutUs = ({navigation}) => {
    }
   
   
-  const styles = StyleSheet.create({
-    pic:{
-      flex:1,
+   const styles = StyleSheet.create({
+    pic: {
+      flex: 1,
       width: '30%',
       height: '90%',
       margin: '.1%'
     },
-    screen:{
-      flex:1,
-      backgroundColor: '#fff',
+    screen: {
+      flex: 1,
+      backgroundColor: 'lavender',
       alignItems: 'center',
-      justifyContent:'center',
+      justifyContent: 'center',
+    },
+    backgroundContainer: {
+      flex: 1,
+      backgroundColor: '#d8e6f0',
     },
     body: {
       flex: 2,
-      width: '100%',
-      justifyContent:'center',
-      flexDirection: 'row',
-      alignItems: 'flex-start',
-      backgroundColor: '#80e2ff'
-      
+      width: '90%',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'lightblue',
+      padding: 20,
+      borderRadius: 10,
+      marginVertical: 20,
+      elevation: 2,
     },
-    
-    picBox:{
-      flex:3,
-      width:'100%',
+    picBox: {
+      flex: 3,
+      width: '100%',
       backgroundColor: 'aquamarine',
       justifyContent: 'center',
       alignItems: 'center',
       flexDirection: 'row'
     },
-    footer:{
-      flex:1,
+    footer: {
+      flex: 1,
       width: '100%',
-      justifyContent:'center',
+      justifyContent: 'center',
       flexDirection: 'row',
       alignItems: 'flex-end',
       backgroundColor: '#ba9fe7'
     },
-    text:{
+    text: {
       textAlign: 'center',
       flex: 1,
       fontSize: 30,
       fontWeight: 'bold',
-      margin:'.5%'
-
+      margin: '.5%'
     },
-    tinyText:{
+    tinyText: {
       textAlign: 'center',
-      flex:1,
-      fontSize:20,
-      margin:'.5%',
-      marginHorizontal:'10%'
+      flex: 1,
+      fontSize: 20,
+      margin: '.5%',
+      marginHorizontal: '10%'
     },
-    nav:{
+    nav: {
       flex: .2,
-      justifyContent:'center',
+      justifyContent: 'center',
       flexDirection: 'row',
       alignItems: 'flex-end',
     },
-    header: {
-        flex: 1,
-        width: '100%',
-        justifyContent:'center',
-        flexDirection: 'row',
-        alignItems: 'flex-start',
-        paddingTop: Constants.statusBarHeight
-      },
+    introTitle: {
+      flex: 0.5,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'plum',
+      borderRadius: 10,
+      marginVertical: 20,
+      paddingVertical: 10,
+      paddingHorizontal: 10,
+    },
+    footer: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'lightpink',
+      borderRadius: 10,
+      marginVertical: 20,
+      paddingVertical: 10,
+    },
+    text: {
+      fontSize: 32,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginVertical: 15,
+    },
+    tinyText: {
+      fontSize: 18,
+      lineHeight: 28,
+      textAlign: 'center',
+      marginHorizontal: 20,
+    },
   });
   
   export default AboutUs;

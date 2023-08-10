@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
 import { View, Button, Text, TextInput, TouchableOpacity, CheckBox, StyleSheet } from 'react-native';
+import 'survey-core/defaultV2.min.css';
+import { Model } from 'survey-core';
+import { Survey } from 'survey-react-ui';
 
 const SurveyPage = ({navigation}) => {
-  const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-  const [isUnder18, setIsUnder18] = useState(false);
-  const [occupation, setOccupation] = useState('');
-  const [studentLoans, setStudentLoans] = useState(false);
-  const [income, setIncome] = useState('');
-  const [showResults, setShowResults] = useState(false);
-
-  const handleSurveySubmit = () => {
-    // Logic to handle the survey submission and show results
-    setShowResults(true);
+  const surveyJson = {
+    elements: [{
+      name: "FirstName",
+      title: "Enter your preferred name:",
+      type: "text"
+    }, {
+      name: "Age",
+      title: "Enter your age:",
+      type: 'text',
+      inputType: 'number',
+    }]
   };
+  const survey = new Model(surveyJson);
 
   return (
+    
+
     <View style={styles.container}>
-      
+    
       <View style = {styles.nav} navigation = {navigation}>
             <Button
               title = "Survey"
@@ -25,9 +31,9 @@ const SurveyPage = ({navigation}) => {
               onPress={() => navigation.navigate('Survey')}
             />
             <Button
-              title = "Tax Forms"
+              title = "Information"
               color = "black"
-              onPress={() => navigation.navigate('TaxForms')}
+              onPress={() => navigation.navigate('Information')}
             />
             <Button
               title = "Tax Fraud"
@@ -41,99 +47,8 @@ const SurveyPage = ({navigation}) => {
             />
 
       </View>
-      <Text style={styles.header}>Tax Survey</Text>
-
-      <Text>Name:</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Please enter your name"
-        onChangeText={text => setName(text)}
-        value={name}
-      />
-
-      <Text>Age:</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Please enter your age"
-        onChangeText={text => setAge(text)}
-        value={age}
-        keyboardType="numeric"
-      />
-
-      <View style={styles.checkboxContainer}>
-        <CheckBox
-          value={isUnder18}
-          onValueChange={value => setIsUnder18(value)}
-        />
-        <Text>Are you under 18?</Text>
+      <Survey model={survey} />;
       </View>
-
-      {isUnder18 ? (
-        <View>
-          {/* Display general info for those under 18 */}
-        </View>
-      ) : (
-        <View>
-          <Text>Occupation:</Text>
-          <View style={styles.checkboxContainer}>
-            <CheckBox
-              value={occupation === 'student'}
-              onValueChange={() => setOccupation('student')}
-            />
-            <Text>Student</Text>
-          </View>
-          <View style={styles.checkboxContainer}>
-            <CheckBox
-              value={occupation === 'other'}
-              onValueChange={() => setOccupation('other')}
-            />
-            <Text>Other</Text>
-          </View>
-
-          {occupation === 'student' && (
-            <View>
-              {/* Ask about student loans */}
-            </View>
-          )}
-
-          {occupation === 'other' && (
-            <View>
-              {/* Display general info for other occupation */}
-            </View>
-          )}
-
-          {occupation === 'employed' && (
-            <View>
-              <Text>Income:</Text>
-              <View style={styles.checkboxContainer}>
-                <CheckBox
-                  value={income === 'likelyTaxFiles'}
-                  onValueChange={() => setIncome('likelyTaxFiles')}
-                />
-                <Text>Likely to file taxes</Text>
-              </View>
-              <View style={styles.checkboxContainer}>
-                <CheckBox
-                  value={income === 'notLikelyTaxFiles'}
-                  onValueChange={() => setIncome('notLikelyTaxFiles')}
-                />
-                <Text>Not likely to file taxes</Text>
-              </View>
-            </View>
-          )}
-        </View>
-      )}
-
-      <TouchableOpacity style={styles.button} onPress={handleSurveySubmit}>
-        <Text style={styles.buttonText}>Submit Survey</Text>
-      </TouchableOpacity>
-
-      {showResults && (
-        <View>
-          {/* Display tax filing obligation message + resources - whatever else we want */}
-        </View>
-      )}
-    </View>
   );
 };
 
