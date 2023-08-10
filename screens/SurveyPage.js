@@ -55,7 +55,7 @@ const SurveyPage = ({ navigation }) => {
               <Text style={styles.label}>Occupation:</Text>
               <View style={styles.checkboxContainer}>
                 <CheckBox
-                  value={occupation === '  tudent'}
+                  value={occupation === '  student'}
                   onValueChange={() => setOccupation('  student')}
                 />
                 <Text>Student</Text>
