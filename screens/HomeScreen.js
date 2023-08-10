@@ -63,70 +63,66 @@ const HomeScreen = ({navigation}) => {
     );
    }
   
-  
-  const styles = StyleSheet.create({
-    screen:{
-      flex:1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent:'center',
-    },
-    backgroundContainer: {
-      flex: 1,
-    },
-    body: {
-      flex: 2,
-      width: '100%',
-      justifyContent:'center',
-      flexDirection: 'row',
-      alignItems: 'flex-start',
-      backgroundColor: '#c4def6'
-      
-    },
-    nav:{
-      flex: .2,
-      justifyContent:'center',
-      flexDirection: 'row',
-      alignItems: 'flex-start',
-    },
-    introTitle:{
-      flex:.5,
-      width:'100%',
-      justifyContent:'center',
-      flexDirection: 'row',
-      alignItems: 'flex-end',
-      backgroundColor: '#c4def6',
-    },
-    footer:{
-      flex:1,
-      width: '100%',
-      height: '10%',
-      justifyContent:'center',
-      flexDirection: 'row',
-      alignItems: 'flex-end',
-      backgroundColor: '#dcd0f7',
-    },
-    text:{
-      textAlign: 'center',
-      flex: 1,
-      fontSize: 30,
-      fontWeight: 'bold',
-      margin:'.5%', 
-    },
-    tinyText:{
-      textAlign: 'center',
-      flex:1,
-      fontSize:20,
-      margin:'.5%',
-      marginHorizontal:'10%'
-    },
-    header: {
+    const styles = StyleSheet.create({
+      screen: {
         flex: 1,
-        width: '100%',
-        justifyContent:'center',
-        flexDirection: 'row',
-        paddingTop: Constants.statusBarHeight
+        backgroundColor: 'lavender',
+        alignItems: 'center',
+        justifyContent: 'center',
       },
-  });
+      backgroundContainer: {
+        flex: 1,
+        backgroundColor: '#d8e6f0', 
+      },
+      body: {
+        flex: 2,
+        width: '90%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'lightblue', 
+        padding: 20,
+        borderRadius: 10,
+        marginVertical: 20,
+        elevation: 2,
+      },
+      nav: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        paddingTop: 20,
+      },
+      introTitle: {
+        flex: 0.5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'plum',
+        borderRadius: 10,
+        marginVertical: 20,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+      },
+      footer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'lightpink',
+        borderRadius: 10,
+        marginVertical: 20,
+        paddingVertical: 10,
+      },
+      text: {
+        fontSize: 32, 
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginVertical: 15, 
+      },
+      tinyText: {
+        fontSize: 18, 
+        lineHeight: 28,
+        textAlign: 'center',
+        marginHorizontal: 20,
+      },
+    });
+    
+    
   
   export default HomeScreen;
