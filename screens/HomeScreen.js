@@ -99,7 +99,7 @@ const HomeScreen = ({navigation}) => {
         borderRadius: 10,
         marginVertical: 20,
         paddingVertical: 10,
-        paddingHorizontal: 10,
+        paddingHorizontal: 25,
       },
       footer: {
         justifyContent: 'center',

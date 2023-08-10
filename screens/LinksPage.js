@@ -15,6 +15,12 @@ const LinksPage = ({ navigation }) => {
       { name: '1', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
       { name: '2', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
       { name: '3', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
+      { name: '4', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
+      { name: '5', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
+      { name: '6', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
+      { name: '7', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
+      { name: '8', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
+      { name: '9', text: 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground.' },
     ];
 
     return buttonsData.map((button) => (
@@ -64,6 +70,7 @@ const LinksPage = ({ navigation }) => {
         <View style={styles.header}>
           <Text style={styles.headerText}>Find Basic Information on Taxes Below</Text>
         </View>
+        <Text style={styles.text}>Please complete the survey first in order to determine which boxes are best for you. </Text>
         <View style={styles.infoContainer}>
           {renderInfoButtons()}
         </View>
@@ -90,13 +97,13 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   header: {
-    paddingTop: 10,
+    paddingTop: 20,
   },
   headerText: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: 'white',
+    color: 'black',
   },
   infoContainer: {
     paddingTop: 20,
@@ -124,6 +131,11 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 14,
     marginTop: 8,
+  },
+  text: {
+    color: 'black',
+    fontSize: 16,
+    textAlign: 'center',
   },
 });
 
