@@ -41,6 +41,7 @@ the TaxXperts!
 3) Connect with APIs to make the information more able to adapt with changing times as well as easier from the developers' perspectives
 4) Create more personalization, which can include a log in screen, a more extensive survey, etc
 5) Not having to reference other links and putting our own/ API information on there.
+6) * Add other types of taxes - property, sales, etc. *
 
 > Project Setup:
 1) As developers, we used many tools in order to set up our project. Firstly, we needed VS Code to run react, which we also had to install (+node.js) in order to get react-native running. Then, to connect to the iPad in order to demo an app on an ios device, we used Expo. Lastly, we used Github in order to be able to code together efficiently and with ease.
