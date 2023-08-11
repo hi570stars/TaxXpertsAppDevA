@@ -26,25 +26,34 @@ the TaxXperts!
 2) Having the various links, videos, and images displayed correctly.
 3) Danica wasn't able to get Expo running on her computer, so she couldn't see what the project looked like. Luckily her two other teammates were very supportive and shared what it looked like so she could see how things were going! (She did reach out to C2C - but no solutions were found)
 4) Learning to work with a new framework/code + finding time to work when we all have different schedules and like to stay busy ;)
-5) ** Insert more here **
+5) Figuring out the nav bar and implementing navigation across all pages with no prior JS knowledge
+6) Syncing all our code we initially were integrating with web to the ipad interface
+7) Making the survey function without becoming neither too complicated nor too easy
 
 > Decisions Made:
 1) What civic issue to choose (also a challenge faced in a way as there were SO many options)?
 2) Who was going to do what + when and how often/what time we would meet together?
-3) ** Insert more here **
+3) Setup decisions - what framework to use, who would lead in terms of setting up the environment.
 
 > Future Improvements/Considerations:
 1) We believe that with more time, we could get this app looking and running absolutely AMAZING! We would love to see it on the app store so that way our project and leave a positive impact on the lives of those around us.
-2) ** Insert more here **
+2) Make the pages more cohesive and create a better design plan.
+3) Connect with APIs to make the information more able to adapt with changing times as well as easier from the developers' perspectives
+4) Create more personalization, which can include a log in screen, a more extensive survey, etc
+5) Not having to reference other links and putting our own/ API information on there.
 
 > Project Setup:
-** Insert more here **
+1) As developers, we used many tools in order to set up our project. Firstly, we needed VS Code to run react, which we also had to install (+node.js) in order to get react-native running. Then, to connect to the iPad in order to demo an app on an ios device, we used Expo. Lastly, we used Github in order to be able to code together efficiently and with ease.
 
 > Installation:
-** Insert more here **
+1) Since we used React Native, a native framework, users can install this app on any android or ios device as soon as we publish it to the Google Play Store as well as the App Store
+2) The developers, personally, had to install VS Code, node.js, React Native, Expo, and several react packages in order to import a lot of our components.
+
+> Usage:
+1) Usage is pretty simple. The user installs the app, then can easily navigate between tabs. The app starts out on the Home Screen, and the user can read the given preliminary information. Then, the user can go between any of the tabs. The one exception/ rule here is that we recommnd 
 
 > API's: 
-** Insert more here **
+no API's used
 
 > Why do I have a folder named ".expo" in my project?
 
