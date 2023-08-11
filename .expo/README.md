@@ -18,7 +18,6 @@ the TaxXperts!
 - Home Page
 - Links/Resources
 - Survey
-- Tax 101
 - Beware of Tax Fraud
 
 > Challenges Faced:
