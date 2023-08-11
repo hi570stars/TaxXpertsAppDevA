@@ -8,7 +8,7 @@ const SurveyPage = ({ navigation }) => {
   const [showResults, setShowResults] = useState(false);
 
   return (
-    <ScrollView style={styles.scrollView}>
+    <View style={styles.container}>
       <View style={styles.nav}>
         <Button
           title="Survey"
@@ -34,6 +34,8 @@ const SurveyPage = ({ navigation }) => {
 
       <View style={styles.container}>
         <Text style={styles.header}>Tax Survey</Text>
+        <Text style={styles.checkbox}> Check Boxes 1-4 on Infromation page for General Information on Taxes.</Text>
+        <Text style={styles.questionText}> </Text>
 
         <View style={styles.coloredContainer}>
           <View style={styles.checkboxContainer}>
@@ -52,27 +54,27 @@ const SurveyPage = ({ navigation }) => {
             </View>
           ) : (
             <View>
-              <Text style={styles.label}>Occupation:</Text>
+              <Text style={styles.label}> Occupation:</Text>
               <View style={styles.checkboxContainer}>
                 <CheckBox
                   value={occupation === '  student'}
                   onValueChange={() => setOccupation('  student')}
                 />
-                <Text>Student</Text>
+                <Text style = {styles.checkbox} >Student</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <CheckBox
                   value={occupation === '  other'}
                   onValueChange={() => setOccupation('  other')}
                 />
-                <Text>Other</Text>
+                <Text style = {styles.checkbox} >Other</Text>
               </View>
               <View style={styles.checkboxContainer}>
                 <CheckBox
                   value={occupation === '  employed'}
                   onValueChange={() => setOccupation('  employed')}
                 />
-                <Text>Employed</Text>
+                <Text style = {styles.checkbox} >Employed</Text>
               </View>
 
               {occupation === '  student' && (
@@ -89,7 +91,7 @@ const SurveyPage = ({ navigation }) => {
 
               {occupation === '  employed' && (
                 <View>
-                  <Text style={styles.label}>Income:</Text>
+                  <Text style={styles.label}> Income:</Text>
                   <View style={styles.checkboxContainer}>
                     <CheckBox
                       value={income === 'overCertainAmount'}
@@ -130,12 +132,12 @@ const SurveyPage = ({ navigation }) => {
           </View>
         )}
       </View>
-    </ScrollView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
+  container: {
     flex: 1,
     backgroundColor: '#f0f0f0',
   },
@@ -163,7 +165,7 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   coloredContainer: {
-    backgroundColor: '#e0e0e0',
+    backgroundColor: 'lightcoral',
     padding: 10,
     borderRadius: 8,
     marginBottom: 20,
@@ -171,6 +173,7 @@ const styles = StyleSheet.create({
   questionText: {
     fontSize: 18,
     fontWeight: 'bold',
+    paddingHorizontal: 10,
   },
   answerContainer: {
     marginTop: 10,
@@ -187,6 +190,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
+    paddingHorizontal: 15,
+  },
+  checkbox:
+  {
+    fontSize: 16,
+    paddingHorizontal: 10,
   },
 });
 
