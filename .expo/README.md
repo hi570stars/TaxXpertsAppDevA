@@ -50,7 +50,7 @@ the TaxXperts!
 2) The developers, personally, had to install VS Code, node.js, React Native, Expo, and several react packages in order to import a lot of our components.
 
 > Usage:
-1) Usage is pretty simple. The user installs the app, then can easily navigate between tabs. The app starts out on the Home Screen, and the user can read the given preliminary information. Then, the user can go between any of the tabs. The one exception/ rule here is that we recommnd 
+1) Usage is pretty simple. The user installs the app, then can easily navigate between tabs. The app starts out on the Home Screen, and the user can read the given preliminary information. Then, the user can go between any of the tabs. The one exception/ rule here is that we recommend the user to take the survey first and then go to the information page to find out more about their specific income tax situation.
 
 > API's: 
 no API's used
