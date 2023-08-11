@@ -137,35 +137,19 @@ const SurveyPage = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  scrollView: {
     flex: 1,
-    backgroundColor: '#f0f0f0',
-  },
-  nav: {
-    flex: 0.2,
-    justifyContent: 'center',
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-  },
-  navButton: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 16,
+    backgroundColor: '#99d',
   },
   container: {
-    flexGrow: 1,
+    backgroundColor:'lavender',
+    flex: 1,
+    padding: 16,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 16,
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-    color: 'black',
   },
   coloredContainer: {
-    backgroundColor: 'lightcoral',
+    backgroundColor: 'lightyellow',
     padding: 10,
     borderRadius: 8,
     marginBottom: 20,
@@ -173,7 +157,6 @@ const styles = StyleSheet.create({
   questionText: {
     fontSize: 18,
     fontWeight: 'bold',
-    paddingHorizontal: 10,
   },
   answerContainer: {
     marginTop: 10,
@@ -190,13 +173,50 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
-    paddingHorizontal: 15,
   },
-  checkbox:
-  {
-    fontSize: 16,
+  header: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  input: {
+    width: '100%',
+    height: 40,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    marginBottom: 10,
     paddingHorizontal: 10,
   },
+  button: {
+    backgroundColor: 'blue',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    marginTop: 20,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  checkboxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  nav:{
+    flex: .2,
+    justifyContent:'center',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    marginTop: 10
+  },
+  navButton: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 16,
+  }
 });
 
 export default SurveyPage;
